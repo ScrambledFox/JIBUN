@@ -1,8 +1,11 @@
 import Socials from "@/components/socials";
+import Cubes from "@/components/threejs/cubes";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen items-center justify-center text-center p-24 font-mono">
+    <main className="flex flex-col min-h-screen items-center justify-center text-center p-24 font-mono m-0 z-10">
+      <Cubes cubeAmount={75} />
+
       <div className="flex flex-col items-center justify-center lg:text-2xl select-none">
         <h1>🚧 This is a construction site 🚧</h1>
         <span className="text-sm italic">or a site in construction?</span>
@@ -18,7 +21,7 @@ export default function Home() {
         <Socials />
 
         <p>
-          Or mail me with{" "}
+          Or mail me at{" "}
           <a
             className="underline underline-offset-4 hover:text-blue-500"
             href="mailto:contact@jorislodewijks.nl"
