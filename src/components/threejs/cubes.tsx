@@ -46,7 +46,7 @@ const Floor = (props: any) => {
 };
 
 const Cube = () => {
-  const [ref, api] = useBox(() => ({
+  const [ref] = useBox(() => ({
     position: [Math.random() * 10 - 5, 25, Math.random() * 10 - 10],
     rotation: [Math.random() * 10, Math.random() * 10, Math.random() * 10],
     mass: 1,
@@ -56,7 +56,6 @@ const Cube = () => {
     <mesh ref={ref} receiveShadow castShadow>
       <boxGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial attach="material" color="white" />
-      <pointLight position={[0, 0, 0]} intensity={2} color={"red"} />
     </mesh>
   );
 };
