@@ -1,7 +1,7 @@
 const MyResume = () => {
   return (
     <div>
-      <iframe className="h-screen w-screen" src="/CV Joris Lodewijks.pdf" />
+      <iframe className="h-screen w-screen" src="/assets/resume.pdf" />
     </div>
   );
 };

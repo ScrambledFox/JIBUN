@@ -3,7 +3,6 @@
 import React from "react";
 import { Canvas, extend } from "@react-three/fiber";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
-import { Box3 } from "three";
 
 interface CubesProps {
   cubeAmount: number;

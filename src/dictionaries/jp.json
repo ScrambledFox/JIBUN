@@ -1,0 +1,18 @@
+{
+    "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "resume": "履歴書",
+        "email": "メール"
+    },
+    "landing": {
+        "hello": "はじめまして。ヨリスです。",
+        "intro": "私はデザイナーでフルスタックソフトウェアエンジニアです。"
+    },
+    "projects": {
+        "intro": "私のプロジェクトをご覧ください。"
+    },
+    "footer": {
+        "checkOutSocials": "私に連絡する場合和、私のソーシャルに連絡してください。あるいは、私の履歴書を読んでください。"
+    }
+}

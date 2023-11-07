@@ -3,28 +3,29 @@
 import "./css/bouncing-arrow.css";
 
 import Image from "next/image";
-import Head from "next/head";
 
 import Typewriter from "typewriter-effect";
+
 import Socials from "../socials";
+import LocaleSwitcher from "@/components/i18n/locale-switcher";
 
 import { AiOutlineDown } from "react-icons/ai";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/i18n.config";
 
-const Landing = () => {
+const Landing = async ({ lang }: { lang: Locale }) => {
+  const { landing } = await getDictionary(lang);
+
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center gap-16 p-32 pointer-events-none">
-      <div className="absolute left-10 top-10">
-        <Socials />
-      </div>
-
+    <div className="relative h-screen flex flex-col justify-center items-center gap-16 pointer-events-none">
       <div className="flex flex-row gap-12 justify-right items-center ml-auto transition-all duration-200 ease-in-out select-none">
-        <h1 className=" text-8xl font-black">Hey! I&apos;m Joris</h1>
+        <h1 className=" text-8xl font-black">{landing.hello}</h1>
         <Image
           src="/images/me/me.jpg"
           alt="Picture of Joris Lodewijks"
           width={300}
           height={300}
-          className=" pointer-events-auto rounded-full object-cover aspect-square hover:scale-105 transition-all duration-250 ease-in-out"
+          className="pointer-events-auto rounded-full object-cover aspect-square hover:scale-105 transition-all duration-250 ease-in-out"
           priority
         />
       </div>
@@ -33,9 +34,7 @@ const Landing = () => {
           <Typewriter
             options={{ delay: 50 }}
             onInit={(typewriter) => {
-              typewriter
-                .typeString("I'm a desiger and Full-Stack Software Engineer.")
-                .start();
+              typewriter.typeString(landing.intro).start();
             }}
           />
         </h1>

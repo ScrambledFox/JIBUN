@@ -1,5 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
+
+import { Inter } from "next/font/google";
+import { Locale } from "@/i18n.config";
 
 const inter = Inter({ subsets: ["latin"], preload: true });
 
@@ -10,12 +12,16 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: Locale };
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
+    <html lang={params.lang} className={inter.className}>
+      <body>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

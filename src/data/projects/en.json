@@ -1,0 +1,10 @@
+[
+    {
+        "name": "HyparDrive",
+        "description": "HyparDrive is a software suite designed to allow us at Hypar Collective to create and prototype modular light art installations and animations. This generation of the software focused on installation built with the 'HyparCube' light fixture. However, further generations of this software focuses on more general light fixtures as well, allowing for highly adaptive and modular light installations."
+    },
+    {
+        "name": "Photon",
+        "description": "Photon is a cloud-based platform for generative design. It is a set of APIs that allow you to create, run, and manage generative design workflows. Photon is built on top of the Hypar Platform, which is a set of APIs for building, running, and managing cloud-based AEC applications."
+    }
+]
