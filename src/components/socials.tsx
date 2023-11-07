@@ -1,5 +1,7 @@
 import React from "react";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+
+const SIZE = 48;
 
 interface SocialProps {
   href: string;
@@ -19,14 +21,18 @@ const Social = ({ href, icon }: SocialProps) => {
 
 const Socials = () => {
   return (
-    <div id="socials" className="flex flex-row gap-2">
+    <div id="socials" className="pointer-events-auto flex flex-row gap-2">
+      <Social
+        href="mailto:info@jorislodewijks.nl"
+        icon={<AiFillMail size={SIZE} />}
+      />
       <Social
         href="https://www.linkedin.com/in/jorislodewijks/"
-        icon={<AiFillLinkedin size={32} />}
+        icon={<AiFillLinkedin size={SIZE} />}
       />
       <Social
         href="https://github.com/ScrambledFox"
-        icon={<AiFillGithub size={32} />}
+        icon={<AiFillGithub size={SIZE} />}
       />
     </div>
   );
