@@ -13,7 +13,7 @@ import MagicMonsterImage from "../../../public/images/projects/magicmonster-cove
 import PhiScriptImage from "../../../public/images/projects/phiscript-cover.png";
 import TeamIgniteImage from "../../../public/images/projects/ignite-cover.png";
 import GezonTijdImage from "../../../public/images/projects/gezontijd-cover.png";
-import NoDeImage from "../../../public/images/projects/node-cover.png";
+import NoDeImage from "../../../public/images/projects/projectnode-cover.png";
 
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
