@@ -1,75 +1,53 @@
 "use client";
 
-import React from "react";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillMail,
-  AiFillBook,
-} from "react-icons/ai";
+import { GithubIcon, LinkedInIcon, MailIcon, ResumeIcon } from "./icons";
 
-interface SocialProps {
-  text: string;
-  href: string;
-  icon: React.ReactNode;
-}
-
-const SIZE = 48;
-const socialMountedStyle = "transition-opacity duration-250 opacity-100";
-const socialUnmountedStyle = "transition-opacity duration-250 opacity-0";
-
-const Social = ({ text, href, icon }: SocialProps) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-
-  const onMouseEnter = () => setIsHovered(true);
-
-  const onMouseLeave = () => setIsHovered(false);
-
-  return (
-    <div className="flex flex-col items-center justify-center w-12">
-      <a
-        className="transition-transform duration-100 hover:scale-110"
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      >
-        {icon}
-      </a>
-      <div className={"overflow-visible"}>
-        <h1 className={isHovered ? socialMountedStyle : socialUnmountedStyle}>
-          {text}
-        </h1>
-      </div>
-    </div>
-  );
-};
+import { motion } from "framer-motion";
 
 const Socials = () => {
   return (
-    <div id="socials" className="flex flex-row gap-2">
-      <Social
-        text={"Email"}
-        href="mailto:info@jorislodewijks.nl"
-        icon={<AiFillMail size={SIZE} />}
-      />
-      <Social
-        text={"LinkedIn"}
+    <>
+      <motion.a
+        target={"_blank"}
+        className="w-6 mx-3"
+        href="https://github.com/ScrambledFox/"
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Checkout my github profile"
+      >
+        <GithubIcon size={25} />
+      </motion.a>
+      <motion.a
+        target={"_blank"}
+        className="w-6 mx-3"
         href="https://www.linkedin.com/in/jorislodewijks/"
-        icon={<AiFillLinkedin size={SIZE} />}
-      />
-      <Social
-        text={"GitHub"}
-        href="https://github.com/ScrambledFox"
-        icon={<AiFillGithub size={SIZE} />}
-      />
-      <Social
-        text={"Resume"}
-        href="/resume"
-        icon={<AiFillBook size={SIZE} />}
-      />
-    </div>
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Checkout my linkedin profile"
+      >
+        <LinkedInIcon size={25} />
+      </motion.a>
+      <motion.a
+        target={"_blank"}
+        className="w-6 mx-3"
+        href="mailto:info@jorislodewijks.nl"
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Mail me"
+      >
+        <MailIcon size={25} />
+      </motion.a>
+      <motion.a
+        target={"_blank"}
+        className="w-6 mx-3"
+        href="#"
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Checkout my resume"
+      >
+        <ResumeIcon size={25} />
+      </motion.a>
+    </>
   );
 };
 
