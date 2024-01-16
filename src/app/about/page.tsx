@@ -112,8 +112,13 @@ const About = () => {
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:col-span-8 md:order-1">
               <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
-
-              <HoverImage intialImage={MePicture} showImage={MeJapanPicture} />
+              <HoverImage
+                width={500}
+                height={500}
+                rounded={true}
+                intialImage={"/images/me/me.png"}
+                showImage={"/images/me/me-japan.png"}
+              />
             </div>
             <div
               className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 

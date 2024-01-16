@@ -4,11 +4,17 @@ import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 
 const HoverImage = ({
+  width,
+  height,
+  rounded,
   intialImage,
   showImage,
 }: {
-  intialImage: StaticImageData;
-  showImage: StaticImageData;
+  width: number;
+  height: number;
+  rounded?: boolean;
+  intialImage: string;
+  showImage: string;
 }) => {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -29,20 +35,26 @@ const HoverImage = ({
       <Image
         src={intialImage}
         alt="AI genereated image of Joris"
-        sizes="100vw"
+        width={width}
+        height={height}
         priority
         className={`absolute opacity-${
           isHovering ? 0 : 100
-        } transition-opacity duration-500 ease-in-out`}
+        } transition-opacity duration-500 ease-in-out ${
+          rounded ? "rounded-[1rem]" : ""
+        }`}
       />
       <Image
         src={showImage}
         alt="Actual image of Joris"
-        sizes="100vw"
+        width={width}
+        height={height}
         priority
         className={`opacity-${
           isHovering ? 100 : 0
-        } transition-opacity duration-500 ease-in-out`}
+        } transition-opacity duration-500 ease-in-out ${
+          rounded ? "rounded-[1rem]" : ""
+        }`}
       />
     </div>
   );
