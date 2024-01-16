@@ -1,8 +1,3 @@
-import { Locale } from "@/i18n.config";
-import { getLocaleData, getProjects } from "@/lib/data";
-import { getDictionary } from "@/lib/dictionary";
-import { JSX } from "react";
-
 interface ProjectProps {
   name: string;
   description: string;
@@ -10,6 +5,12 @@ interface ProjectProps {
   github?: string;
   website?: string;
 }
+
+const getProjectData = async () => {
+  const res = await fetch("@/api/projects");
+  const data = await res.json();
+  return data;
+};
 
 const Project = ({ ...props }: ProjectProps) => {
   return (
@@ -21,15 +22,14 @@ const Project = ({ ...props }: ProjectProps) => {
   );
 };
 
-const Projects = async ({ lang }: { lang: Locale }) => {
-  const { projects } = await getDictionary(lang);
-  const projectData = await getLocaleData("projects", lang);
+const Projects = async () => {
+  const projectData = await getProjectData();
 
   return (
     <div className="flex flex-col items-center justify-center gap-8">
-      <h1 className="text-7xl font-medium">{projects.intro}</h1>
+      <h1 className="text-7xl font-medium">{"Check out my work"}</h1>
       <div className="flex flex-wrap gap-8 justify-center items-stretch">
-        {projectData.map((project: ProjectProps) => (
+        {/* {projectData.map((project: ProjectProps) => (
           <Project
             key={project.name}
             name={project.name}
@@ -38,7 +38,7 @@ const Projects = async ({ lang }: { lang: Locale }) => {
             github={project.github}
             website={project.website}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );

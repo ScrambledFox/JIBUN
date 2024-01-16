@@ -6,22 +6,16 @@ import Image from "next/image";
 
 import Typewriter from "typewriter-effect";
 
-import Socials from "../socials";
-import LocaleSwitcher from "@/components/i18n/locale-switcher";
-
 import { AiOutlineDown } from "react-icons/ai";
-import { getDictionary } from "@/lib/dictionary";
-import { Locale } from "@/i18n.config";
 
-const Landing = async ({ lang }: { lang: Locale }) => {
-  const { landing } = await getDictionary(lang);
-
+const Landing = () => {
   return (
     <div className="relative h-screen flex flex-col justify-center items-center gap-16 pointer-events-none">
       <div className="flex flex-row gap-12 justify-right items-center ml-auto transition-all duration-200 ease-in-out select-none">
-        <h1 className=" text-8xl font-black">{landing.hello}</h1>
+        <h1 className=" text-8xl font-black">{"Hello, I'm Joris"}</h1>
         <Image
-          src="/images/me/me.jpg"
+          src={`/images/me/me.jpg`}
+          // src={`/images/me/me.jpg`}
           alt="Picture of Joris Lodewijks"
           width={300}
           height={300}
@@ -34,7 +28,9 @@ const Landing = async ({ lang }: { lang: Locale }) => {
           <Typewriter
             options={{ delay: 50 }}
             onInit={(typewriter) => {
-              typewriter.typeString(landing.intro).start();
+              typewriter
+                .typeString("I'm a Designer and Full-Stack Software Engineer.")
+                .start();
             }}
           />
         </h1>

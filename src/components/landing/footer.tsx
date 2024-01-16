@@ -1,16 +1,12 @@
-import { getDictionary } from "@/lib/dictionary";
-import Socials from "../socials";
-import { Locale } from "@/i18n.config";
+import Socials from "../portfolio/socials";
 
-const Footer = async ({ lang }: { lang: Locale }) => {
-  const { footer } = await getDictionary(lang);
-
+const Footer = () => {
   return (
     <div className="p-8 min-h-[25vh]">
       <div className="flex flex-col gap-8 items-center justify-center">
-        <h1 className="text-6xl">{footer.checkOutSocials}</h1>
+        <h1 className="text-6xl">{"Check out my socials!"}</h1>
 
-        <Socials lang={lang} />
+        <Socials />
       </div>
     </div>
   );
