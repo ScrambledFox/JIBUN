@@ -1,13 +1,17 @@
+import { useState } from "react";
+
 import { LinkArrow } from "@/components/portfolio/icons";
 import Layout from "@/components/portfolio/layout";
 import Head from "next/head";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import AIImage from "../../public/images/me/ai-edit.png";
+import MeImage from "../../public/images/me/plane-me.png";
 
 import TransitionEffect from "@/components/portfolio/transitionEffect";
 import AnimatedText from "@/components/portfolio/animatedText";
+import HoverImage from "@/components/portfolio/hoverImage";
 
 const Home = () => {
   return (
@@ -17,12 +21,7 @@ const Home = () => {
         <div className="z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 lg:p-16 md:p-12 sm:p-8 !pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
             <div className="w-1/2 lg:hidden md:inline-block md:w-full">
-              <Image
-                src={AIImage}
-                alt="AI genereated image of Joris"
-                sizes="100vw"
-                priority
-              />
+              <HoverImage intialImage={AIImage} showImage={MeImage} />
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText

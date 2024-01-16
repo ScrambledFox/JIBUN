@@ -2,16 +2,17 @@
 
 import AnimatedText from "@/components/portfolio/animatedText";
 import TransitionEffect from "@/components/portfolio/transitionEffect";
-import Head from "next/head";
-import Image from "next/image";
 
-import MePicture from "../../../public/images/me/me.jpg";
+import MePicture from "../../../public/images/me/me.png";
+import MeJapanPicture from "../../../public/images/me/me-japan.png";
+
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/portfolio/skills";
 import Experience from "@/components/portfolio/experience";
 import Education from "@/components/portfolio/education";
 import Vision from "@/components/portfolio/vision";
+import HoverImage from "@/components/portfolio/hoverImage";
 
 function AnimatedNumberFramerMotion({ value }: { value: number }) {
   const ref = useRef(null);
@@ -87,13 +88,15 @@ const About = () => {
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:col-span-8 md:order-1">
               <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
-              <Image
+
+              <HoverImage intialImage={MePicture} showImage={MeJapanPicture} />
+              {/* <Image
                 className="h-auto w-full rounded-2xl"
                 src={MePicture}
                 alt="Joris Lodewijks"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
-              />
+              /> */}
             </div>
             {/* <div
               className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
