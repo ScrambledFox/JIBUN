@@ -58,6 +58,11 @@ const Navbar = () => {
         <nav className="flex items-center justify-between">
           <CustomLink className="mr-4" href="/" title="Home" />
           <CustomLink className="mx-4" href="/about" title="About Me" />
+          <CustomLink
+            className="mx-4"
+            href="/development"
+            title="Development"
+          />
           <CustomLink className="mx-4" href="/projects" title="Projects" />
           <CustomLink className="ml-4" href="/contact" title="Contact" />
         </nav>

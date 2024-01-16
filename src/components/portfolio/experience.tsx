@@ -48,7 +48,9 @@ const Details = ({
         </span>
 
         {!isExpanded && (description[0] as string).length > 200 && (
-          <p className={`font-medium w-full text-justify md:text-sm`}>
+          <p
+            className={`font-medium w-full text-justify dark:text-light/75 md:text-sm`}
+          >
             {(description[0] as string).slice(0, 200)}...
           </p>
         )}

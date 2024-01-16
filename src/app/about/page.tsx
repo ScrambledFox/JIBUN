@@ -6,13 +6,14 @@ import TransitionEffect from "@/components/portfolio/transitionEffect";
 import MePicture from "../../../public/images/me/me.png";
 import MeJapanPicture from "../../../public/images/me/me-japan.png";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/portfolio/skills";
 import Experience from "@/components/portfolio/experience";
 import Education from "@/components/portfolio/education";
 import Vision from "@/components/portfolio/vision";
 import HoverImage from "@/components/portfolio/hoverImage";
+import { CodeIcon, DesignIcon } from "@/components/portfolio/icons";
 
 function AnimatedNumberFramerMotion({ value }: { value: number }) {
   const ref = useRef(null);
@@ -38,6 +39,29 @@ function AnimatedNumberFramerMotion({ value }: { value: number }) {
 
   return <span ref={ref} />;
 }
+
+const Card = ({
+  title,
+  icon,
+  text,
+}: {
+  title: string;
+  icon: React.JSX.Element;
+  text: string;
+}) => {
+  return (
+    <div className="relative w-full rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark">
+      <p className="flex flex-row justify-center items-center gap-4 text-2xl font-semibold">
+        <div className="flex flex-col items-center justify-center">{icon}</div>
+        {title}
+      </p>
+
+      <p className="font-medium mt-4 mx-auto">{text}</p>
+
+      <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
+    </div>
+  );
+};
 
 const About = () => {
   return (
@@ -90,39 +114,20 @@ const About = () => {
               <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
 
               <HoverImage intialImage={MePicture} showImage={MeJapanPicture} />
-              {/* <Image
-                className="h-auto w-full rounded-2xl"
-                src={MePicture}
-                alt="Joris Lodewijks"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority
-              /> */}
             </div>
-            {/* <div
+            <div
               className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
             xl:items-center md:order-3"
             >
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={40} />+
+                  <AnimatedNumberFramerMotion value={8} />+
                 </span>
                 <h2
                   className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm"
                 >
-                  satisfied clients
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={50} />+
-                </span>
-                <h2
-                  className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm"
-                >
-                  projects completed
+                  Years of Tech Focus
                 </h2>
               </div>
 
@@ -134,13 +139,44 @@ const About = () => {
                   className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm"
                 >
-                  Years of experience
+                  Years experience
                 </h2>
               </div>
-            </div> */}
+
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                  <AnimatedNumberFramerMotion value={100} />%
+                </span>
+                <h2
+                  className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
+                xl:text-center md:text-lg sm:text-base xs:text-sm"
+                >
+                  Dedicated to Learning
+                </h2>
+              </div>
+            </div>
           </div>
 
           <Vision className="mt-8" />
+
+          <div className="flex justify-center items-center">
+            <div className="mt-8 w-4/5 flex flex-row gap-8 items-center justify-center">
+              <Card
+                icon={DesignIcon({ size: 25 })}
+                title={"Designer First"}
+                text={
+                  "I am a designer first. I am able to create high-fidelity prototypes fast and validate my designs in a lab and field test setting."
+                }
+              />
+              <Card
+                icon={CodeIcon({ size: 25 })}
+                title={"Developer Second"}
+                text={
+                  "I am a designer first. I am able to create high-fidelity prototypes fast and validate my designs in a lab and field test setting."
+                }
+              />
+            </div>
+          </div>
 
           <Skills />
           <Experience />

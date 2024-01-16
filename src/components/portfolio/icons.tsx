@@ -9,8 +9,27 @@ export const GithubIcon = ({
   size: number;
 }) => <FaGithub size={size} />;
 
-import { ImLinkedin } from "react-icons/im";
+import { FaPencilRuler } from "react-icons/fa";
+export const DesignIcon = ({
+  className,
+  size,
+  ...rest
+}: {
+  className?: string;
+  size: number;
+}) => <FaPencilRuler size={size} />;
 
+import { FaLaptopCode } from "react-icons/fa";
+export const CodeIcon = ({
+  className,
+  size,
+  ...rest
+}: {
+  className?: string;
+  size: number;
+}) => <FaLaptopCode size={size} />;
+
+import { ImLinkedin } from "react-icons/im";
 export const LinkedInIcon = ({
   className,
   size,

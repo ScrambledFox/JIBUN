@@ -30,6 +30,7 @@ const Skills = ({ className }: { className?: string }) => {
       <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
         Skills
       </h2>
+
       <div
         ref={ref}
         className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark  flex items-center justify-center 
@@ -44,21 +45,37 @@ const Skills = ({ className }: { className?: string }) => {
         dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:text-xs xs:p-2
         "
         >
-          Web
+          Tech
         </motion.div>
 
+        <Skill name="Deep Learning" x="10vw" y="-20vw" />
+        <Skill name="Reinforcment Learning" x="25vw" y="-19vw" />
+        <Skill name="Explainable Artificial Intelligence" x="12vw" y="-15vw" />
         <Skill name="HTML" x="-20vw" y="2vw" />
-
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="JavaScript" x="20vw" y="6vw" />
-        <Skill name="ReactJS" x="0vw" y="12vw" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="GatsbyJS" x="15vw" y="-12vw" />
-        <Skill name="Github" x="-35vw" y="-5vw" />
-        <Skill name="Web Design" x="32vw" y="-5vw" />
-        <Skill name="Figma" x="0vw" y="-20vw" />
-        <Skill name="Firebase" x="-25vw" y="18vw" />
-        <Skill name="Tawilwind CSS" x="28vw" y="18vw" />
+        <Skill name="CSS" x="-15vw" y="-2vw" />
+        <Skill name="JavaScript" x="-12vw" y="4vw" />
+        <Skill name="TypeScript" x="-13vw" y="15vw" />
+        <Skill name="ReactJS" x="-11vw" y="11vw" />
+        <Skill name="React Native" x="0vw" y="12vw" />
+        <Skill name="NextJS" x="-18vw" y="12vw" />
+        <Skill name="ElectronJS" x="-10vw" y="19vw" />
+        <Skill name="Github" x="-20vw" y="-15vw" />
+        <Skill name="Figma" x="-15vw" y="-18vw" />
+        <Skill name="Firebase" x="-27vw" y="-14vw" />
+        <Skill name="Tawilwind CSS" x="-25vw" y="-5vw" />
+        <Skill name="Python" x="28vw" y="8vw" />
+        <Skill name="Django" x="25vw" y="5vw" />
+        <Skill name="Flask" x="22vw" y="8vw" />
+        <Skill name="C" x="11vw" y="6vw" />
+        <Skill name="C++" x="10vw" y="10vw" />
+        <Skill name="RESTful API" x="25vw" y="14vw" />
+        <Skill name="C#" x="28vw" y="-2vw" />
+        <Skill name=".NET" x="22vw" y="-4vw" />
+        <Skill name=".NET Core" x="28vw" y="-6vw" />
+        <Skill name="MQTT" x="-28vw" y="-18vw" />
+        <Skill name="Unity" x="23vw" y="0vw" />
+        <Skill name="Java" x="28vw" y="18vw" />
+        <Skill name="Spring Boot" x="20vw" y="18vw" />
       </div>
     </div>
   );
