@@ -13,8 +13,8 @@ const HoverImage = ({
   width: number;
   height: number;
   rounded?: boolean;
-  intialImage: string;
-  showImage: string;
+  intialImage: StaticImageData;
+  showImage: StaticImageData;
 }) => {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -35,24 +35,18 @@ const HoverImage = ({
       <Image
         src={intialImage}
         alt="AI genereated image of Joris"
-        width={width}
-        height={height}
+        sizes={"100vw"}
         priority
-        className={`absolute opacity-${
-          isHovering ? 0 : 100
-        } transition-opacity duration-500 ease-in-out ${
+        className={` z-10 absolute peer opacity-100 hover:opacity-0 transition-opacity duration-500 ease-in-out ${
           rounded ? "rounded-[1rem]" : ""
         }`}
       />
       <Image
         src={showImage}
         alt="Actual image of Joris"
-        width={width}
-        height={height}
+        sizes={"100vw"}
         priority
-        className={`opacity-${
-          isHovering ? 100 : 0
-        } transition-opacity duration-500 ease-in-out ${
+        className={`opacity-0 peer-hover:opacity-100 transition-opacity duration-500 ease-in-out ${
           rounded ? "rounded-[1rem]" : ""
         }`}
       />

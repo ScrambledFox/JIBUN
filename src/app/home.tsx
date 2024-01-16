@@ -24,8 +24,8 @@ const Home = () => {
               <HoverImage
                 width={800}
                 height={800}
-                intialImage={"/images/me/ai-edit.png"}
-                showImage={"/images/me/plane-me.png"}
+                intialImage={AIImage}
+                showImage={MeImage}
               />
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">

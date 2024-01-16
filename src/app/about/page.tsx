@@ -14,6 +14,7 @@ import Education from "@/components/portfolio/education";
 import Vision from "@/components/portfolio/vision";
 import HoverImage from "@/components/portfolio/hoverImage";
 import { CodeIcon, DesignIcon } from "@/components/portfolio/icons";
+import Link from "next/link";
 
 function AnimatedNumberFramerMotion({ value }: { value: number }) {
   const ref = useRef(null);
@@ -116,8 +117,8 @@ const About = () => {
                 width={500}
                 height={500}
                 rounded={true}
-                intialImage={"/images/me/me.png"}
-                showImage={"/images/me/me-japan.png"}
+                intialImage={MePicture}
+                showImage={MeJapanPicture}
               />
             </div>
             <div
@@ -163,6 +164,18 @@ const About = () => {
           </div>
 
           <Vision className="mt-8" />
+
+          <div className="my-16 flex flex-row justify-center items-center">
+            <Link
+              href={"/development"}
+              className="ml-4 rounded-lg
+             bg-dark p-4 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
+             sm:px-4 sm:text-base
+            "
+            >
+              See My Development Journey...
+            </Link>
+          </div>
 
           <div className="flex justify-center items-center">
             <div className="mt-8 w-4/5 flex flex-row gap-8 items-center justify-center">
