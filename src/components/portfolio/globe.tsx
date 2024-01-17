@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import Globe from "react-globe.gl";
+import dynamic from "next/dynamic";
 
-const places = [];
+const Globe = dynamic(import("react-globe.gl"), { ssr: false });
 
 const GlobeVisual = () => {
   const World = () => {
