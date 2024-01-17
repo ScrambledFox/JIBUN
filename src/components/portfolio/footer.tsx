@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center lg:py-2">
-          Made with <span className="text-[#C22BD4] text-2xl px-1">♥</span>{" "}
+          Made with <span className="text-[#ff0000] text-2xl px-1">❤</span>{" "}
           by&nbsp; Joris Lodewijks
         </div>
       </Layout>

@@ -1,0 +1,125 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 11,
+                "name": "Eindhoven"
+            },
+            "geometry": {
+                "coordinates": [
+                    5.482926634206308,
+                    51.43926352060737
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Assen"
+            },
+            "geometry": {
+                "coordinates": [
+                    6.561722606020567,
+                    52.998800579762104
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Helsinki"
+            },
+            "geometry": {
+                "coordinates": [
+                    24.941290788912767,
+                    60.16711613408316
+                ],
+                "type": "Point"
+            },
+            "id": 2
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Vilnius"
+            },
+            "geometry": {
+                "coordinates": [
+                    25.280925453961174,
+                    54.68207420406392
+                ],
+                "type": "Point"
+            },
+            "id": 3
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Essen"
+            },
+            "geometry": {
+                "coordinates": [
+                    7.015915477171461,
+                    51.45759704045457
+                ],
+                "type": "Point"
+            },
+            "id": 4
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Bloemendaal"
+            },
+            "geometry": {
+                "coordinates": [
+                    4.609560406464055,
+                    52.41265221672731
+                ],
+                "type": "Point"
+            },
+            "id": 5
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Amsterdam"
+            },
+            "geometry": {
+                "coordinates": [
+                    4.8883212860203855,
+                    52.34025328839101
+                ],
+                "type": "Point"
+            },
+            "id": 6
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "events": 1,
+                "name": "Ushiku"
+            },
+            "geometry": {
+                "coordinates": [
+                    140.14208078195418,
+                    35.39892190194749
+                ],
+                "type": "Point"
+            },
+            "id": 7
+        }
+    ]
+}

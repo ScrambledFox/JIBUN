@@ -62,13 +62,13 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            type="Master of Industrial Design"
+            type="Master - Industrial Design"
             time="2022-2024"
             place="Eindhoven, University of Technology (TU/e)"
             info="Worked on a master's project on reinforcement learning, developing a reinforcement learning strategy for interior design support using feng shui principles."
           />
           <Details
-            type="Bachelor in Industrial Design"
+            type="Bachelor - Industrial Design"
             time="2017-2022"
             place="Eindhoven, University of Technology (TU/e)"
             info="Relevant courses included Designing Interactive Systems, Designing User Research, and Designing User Experiences. Finished final bachelor's project on designing a visual programming tool for smart home solutions."

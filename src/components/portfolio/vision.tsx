@@ -16,19 +16,27 @@ const Vision = ({ className }: { className?: string }) => {
             day-to-day life with state-of-the-art technologies that can assist
             us with everyday tasks. I want to provide products for users that
             aim at reducing the everyday stress of life and do not add to an
-            already growing pile of &apos;tech&apos; in the home, like is
-            happening now with voice assistants or remotes. New technology
-            products need to be aware of the ecosystem they live in and be able
-            to transform themselves to adapt to the needs of their user and work
-            together with other devices with which they share the digital
-            ecosystem. An example of this can now be seen in the IoT
-            environment, where audio devices can work together to create one big
-            speaker.
+            already growing pile of &apos;tech&apos; or &apos;bloatware&apos; in
+            the home, like is happening now with voice assistants or remotes.
+            New technology products need to be aware of the ecosystem they live
+            in and be able to transform themselves to adapt to the needs of
+            their user and work together with other devices with which they
+            share the digital ecosystem. Why create new interactions if we can
+            attach actions to already existing interactions?
           </p>
         </div>
         <div className="flex flex-col gap-1 mx-8">
           <p className="uppercase font-semibold text-dark text-sm dark:text-light/50">
             Data & Connections
+          </p>
+          <p className="font-medium ">
+            There is so much information available in the world, but society is
+            now just diving into how to make value using this information in an
+            aggregated form. With artificial intelligence, like ChatGPT, now
+            more intelligent than ever, society has gotten a taste of the power
+            of insights gained from mass information. As a designer, I want to
+            make use of the sheer amount of information available and what we
+            can gather from user environments to create optimal value.
           </p>
           <p className="font-medium ">
             Data and information are better perceived when felt or heard as part

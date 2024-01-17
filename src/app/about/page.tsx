@@ -15,6 +15,8 @@ import Vision from "@/components/portfolio/vision";
 import HoverImage from "@/components/portfolio/hoverImage";
 import { CodeIcon, DesignIcon } from "@/components/portfolio/icons";
 import Link from "next/link";
+import Identity from "@/components/portfolio/identity";
+import { AnimatedCard, AnimatedCards, Card } from "@/components/portfolio/card";
 
 function AnimatedNumberFramerMotion({ value }: { value: number }) {
   const ref = useRef(null);
@@ -41,29 +43,6 @@ function AnimatedNumberFramerMotion({ value }: { value: number }) {
   return <span ref={ref} />;
 }
 
-const Card = ({
-  title,
-  icon,
-  text,
-}: {
-  title: string;
-  icon: React.JSX.Element;
-  text: string;
-}) => {
-  return (
-    <div className="relative w-full rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark">
-      <p className="flex flex-row justify-center items-center gap-4 text-2xl font-semibold">
-        <div className="flex flex-col items-center justify-center">{icon}</div>
-        {title}
-      </p>
-
-      <p className="font-medium mt-4 mx-auto">{text}</p>
-
-      <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
-    </div>
-  );
-};
-
 const About = () => {
   return (
     <>
@@ -76,41 +55,8 @@ const About = () => {
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div className="col-span-3 flex flex-col items-start justify-start text-justify xl:col-span-4 md:order-2 md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                IDENTITY 👨🏻‍💻
-              </h2>
-              <p className="font-medium">
-                My name is <strong>Joris Lodewijks</strong> and with a focus on
-                user-centred design, I design products by analysing gathered
-                data from the user&apos;s environment and digital ecosystem. I
-                create high-fidelity software and hardware prototypes to
-                validate my designs in lab and field test settings to be able to
-                test intended use but also give space for emergent functionality
-                to surface. I embrace this emergent functionality and provide
-                space for it to live inside my designs.
-              </p>
-              <p className="font-medium my-4">
-                My expertise lies in creating powerful virtual prototypes fast,
-                especially when it comes to creating connected systems. With a
-                focus on the Internet of Things and connected systems designs, I
-                create online tools and powerful hardware devices to create a
-                data-rich environment to validate my designs, which can be
-                integrated without too much hassle in an already existing
-                environment and even learn from it.
-              </p>
-              <p className="font-medium">
-                I see myself as a designer who is not afraid to dive into the
-                deep and learn a new skill. I am able to work in close relations
-                with an engineering team without falling behind in knowledge.
-                When it comes to creating prototypes, I will use tools to my
-                advantage to quickly create high-quality products. While my
-                expertise lies in creating digital solutions, I see myself as a
-                jack-of-all-trades who can understand and provide in a lot of
-                different areas of expertise and is not afraid to spend time to
-                come up to speed in less-explored topics.
-              </p>
-            </div>
+            <Identity className="col-span-3" />
+
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:col-span-8 md:order-1">
               <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light" />
               <HoverImage
@@ -168,32 +114,42 @@ const About = () => {
           <div className="my-16 flex flex-row justify-center items-center">
             <Link
               href={"/development"}
-              className="ml-4 rounded-lg
-             bg-dark p-4 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
+              className="text-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+              capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
+              dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
+              md:p-2 md:px-4 md:text-base
             "
             >
-              See My Development Journey...
+              See My Development Journey
             </Link>
           </div>
 
-          <div className="flex justify-center items-center">
-            <div className="mt-8 w-4/5 flex flex-row gap-8 items-center justify-center">
-              <Card
-                icon={DesignIcon({ size: 25 })}
-                title={"Designer First"}
-                text={
-                  "I am a designer first. I am able to create high-fidelity prototypes fast and validate my designs in a lab and field test setting."
-                }
-              />
-              <Card
-                icon={CodeIcon({ size: 25 })}
-                title={"Developer Second"}
-                text={
-                  "I am a designer first. I am able to create high-fidelity prototypes fast and validate my designs in a lab and field test setting."
-                }
-              />
-            </div>
+          <div className="mt-64 flex justify-center items-center">
+            <AnimatedCards className="w-4/5 flex flex-row gap-8 items-center justify-center">
+              <div className="flex-1">
+                <AnimatedCard
+                  index={0}
+                  icon={DesignIcon({ size: 25 })}
+                  title={"Designer First"}
+                  text={
+                    "I am a designer first. I am able to create high-fidelity prototypes fast and validate my designs in a lab and field test setting."
+                  }
+                  className={"flex-1"}
+                />
+              </div>
+
+              <div className="flex-1">
+                <AnimatedCard
+                  index={1}
+                  icon={CodeIcon({ size: 25 })}
+                  title={"Developer Second"}
+                  text={
+                    "I am a developer second. I am able to create high-quality code and have a strong understanding of the underlying technologies. With high-fidelity prototypes, I am able to test my design concepts with high value results."
+                  }
+                  className={"flex-1"}
+                />
+              </div>
+            </AnimatedCards>
           </div>
 
           <Skills />

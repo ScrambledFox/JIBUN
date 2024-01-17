@@ -52,7 +52,7 @@ const FeaturedProject = ({
       />
 
       <Link
-        href={link}
+        href={"#"}
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
@@ -158,7 +158,7 @@ const Project = ({
       />
 
       <Link
-        href={link}
+        href={"#"}
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
         <FramerImage
@@ -239,7 +239,7 @@ const Projects = () => {
           <div className="mb-8 flex flex-col justify-center items-center sm:mb-4">
             <p className="text-2xl font-semibold w-1/2 text-center">
               I love to build things that make a difference. Here are some of my
-              projects that I have worked on recently.
+              projects that I have worked on.
             </p>
           </div>
 

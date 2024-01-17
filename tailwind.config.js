@@ -46,6 +46,9 @@ module.exports = {
       boxShadow: {
         "3xl": "0 15px 15px 1px rgba(255,110,110, 0.4)",
       },
+      flex: {
+        2: "2 2 0%",
+      },
     },
     screens: {
       "2xl": { max: "1535px" },
