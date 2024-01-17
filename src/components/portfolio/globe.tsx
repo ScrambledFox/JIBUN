@@ -3,7 +3,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
-const Globe = dynamic(import("react-globe.gl"), { ssr: false });
+const Globe = dynamic(
+  () => import("react-globe.gl").then((mod) => mod.default),
+  {
+    ssr: false,
+  }
+);
 
 const GlobeVisual = () => {
   const World = () => {
